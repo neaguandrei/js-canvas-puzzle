@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multimedia Project - Puzzle Game</title>
+    <script type="text/javascript" src="5_1072_NEAGU_ANDREI_COSMIN.js"></script>
+    <link rel="stylesheet" type="text/css" href="5_1072_NEAGU_ANDREI_COSMIN.css" media="screen" />
+</head>
+
+<body onload="initializeComponents();">
+    <div class="main-container">
+        <div class="puzzle-container">
+            <canvas id="puzzle"></canvas>
+            <br />
+            <button id="btnStart" class="button">Shuffle puzzle</button>
+            <button id="btnRestart" class="button2">Try again</button>
+            <p id="headerFinish"></p>
+
+        </div>
+        <div class="upload-container">
+            <canvas id="uploadCanvas" class="uploadCanvas" width="300" height="300">Upload canvas</canvas>
+            <br />
+            <small>Initial photo. Drag and drop over here.</small>
+        </div>
+    </div>
+    <div class="second-container">
+        <div class="guide-container" style="margin-left:10px">
+            <h2 style="padding-left:10px"> How to play the puzzle game?</h2>
+            <ul>
+                <li> Upload the photo you want to have in the puzzle into the box located in the top right corner of
+                    the web page.</li>
+                <li> There is a default picture with two dogs. Drag and drop the one you wish to play the puzzle on.</li>
+                <li> Change the difficulty accordingly.</li>
+                <li> Shuffle the puzzle to get started.</li>
+                <li> Press 'Try again' if you want to return to the initial state.</li>
+            </ul>
+            <h2 style="padding-left:10px"> Can't solve it yourself? No problem, hit the following button to watch the
+                puzzle solving process!</h2>
+            <button id="btnAutoSolve" class="button2">Auto solving</button>
+        </div>
+        <div class="difficulty-container">
+            <p>Puzzle difficulty levels </p>
+            <select name="difficulty" id="selectDifficulty" onchange="onChange();">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="very-hard">Very hard</option>
+            </select>
+            <br><br>
+            <p id="totalPuzzlePieces">Total number of puzzle pieces: 4</p>
+        </div>
+    </div>
+    <audio id="puzzleMoveAudio">
+        <source src="media/mp3/beep.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="startPuzzleAudio">
+        <source src="media/mp3/start.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="finishPuzzleAudio">
+        <source src="media/mp3/finish.mp3" type="audio/mp3">
+    </audio>
+    <footer>
+        <p class="copyright">Neagu Andrei-Cosmin 1072 IE (Project Multimedia - Puzzle Game based on Canvas)</p>
+    </footer>
+
+</body>
+
+</html>
